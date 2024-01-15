@@ -1,0 +1,141 @@
+body {
+  background: rgb(155, 210, 227);
+}
+
+img {
+  border: 2px solid rgb(67, 61, 50);
+  border-radius: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 15px;
+}
+
+p {
+    margin: 0;
+}
+
+.breed-select {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-bottom: 45px;
+}
+
+.cat-info {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 30px;
+}
+
+.cat-descr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: rgb(189, 216, 229);
+  color: rgb(67, 61, 50);
+  border: 2px solid rgb(67, 61, 50);
+  border-radius: 20px;
+}
+
+.description {
+  max-width: 600px;
+}
+
+.error {
+  color: #ea0101;
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.loader {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100px;
+  height: 16px;
+}
+
+.css-loader:before,
+.css-loader:after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 32px 0 #fff;
+  left: 0;
+  top: 0;
+  animation: ballMoveX 2s linear infinite;
+}
+
+.css-loader:after {
+  box-shadow: none;
+  transform: translateX(64px) scale(1);
+  z-index: 2;
+  animation: none;
+  animation: trfLoader 2s linear infinite;
+}
+
+@keyframes trfLoader {
+  0%,
+  5% {
+    transform: translateX(64px) scale(1);
+    background: #fff;
+  }
+
+  10% {
+    transform: translateX(64px) scale(1);
+    background: #ff3d00;
+  }
+
+  40% {
+    transform: translateX(32px) scale(1.5);
+    background: #ff3d00;
+  }
+
+  90%,
+  95% {
+    transform: translateX(0px) scale(1);
+    background: #ff3d00;
+  }
+
+  100% {
+    transform: translateX(0px) scale(1);
+    background: #fff;
+  }
+}
+
+@keyframes ballMoveX {
+  0%,
+  10% {
+    transform: translateX(0);
+  }
+
+  90%,
+  100% {
+    transform: translateX(32px);
+  }
+}
